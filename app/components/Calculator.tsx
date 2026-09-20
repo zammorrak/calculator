@@ -13,10 +13,16 @@ export default function Calculator() {
     const [display, setDisplay] = useState('0');
     const [equation, setEquation] = useState('');
     const [history, setHistory] = useState<HistoryItem[]>([]);
+    const [isNewCalculation, setIsNewCalculation] = useState(true);
     const [showHistory, setShowHistory] = useState(false);
 
     const handleNumber = (num: string) => {
-        setDisplay((prev) => (prev === '0' ? num : prev + num));
+        if (isNewCalculation) {
+            setDisplay(num);
+            setIsNewCalculation(false);
+        } else {
+            setDisplay((prev) => (prev === '0' ? num : prev + num));
+        }
     };
 
     const handleOperator = (op: string) => {
@@ -33,7 +39,8 @@ export default function Calculator() {
         try {
             const fullExpression = equation + display;
             const result = eval(fullExpression.replace(/×/g, '*').replace(/÷/g, '/'));
-            const finalResult = String(result);
+            const correctedResult = parseFloat(result.toFixed(10));
+            const finalResult = String(correctedResult);
 
             if (equation !== '') {
                 const newItem: HistoryItem = {
@@ -44,6 +51,7 @@ export default function Calculator() {
                 setHistory((prev) => [newItem, ...prev]);
             }
 
+            setIsNewCalculation(true);
             setDisplay(finalResult);
             setEquation('');
         } catch {
