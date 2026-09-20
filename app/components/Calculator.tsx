@@ -26,7 +26,7 @@ export default function Calculator() {
     };
 
     const handleOperator = (op: string) => {
-        setEquation(display + ' ' + op + ' ');
+        setEquation(equation + display + ' ' + op + ' ');
         setDisplay('0');
     };
 
@@ -56,6 +56,7 @@ export default function Calculator() {
             setEquation('');
         } catch {
             setDisplay('Erreur');
+            setEquation('');
         }
     };
 

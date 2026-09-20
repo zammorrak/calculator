@@ -14,6 +14,7 @@ Une application de calculatrice moderne, responsive et interactive développée 
 - [Installation et lancement](#installation-et-lancement)
 - [Architecture des composants](#architecture-des-composants)
 - [Scripts disponibles](#scripts-disponibles)
+- [Idées d'amélioration](#idées-damélioration)
 
 ---
 
@@ -124,3 +125,13 @@ Composant à deux modes, sélectionnables via des onglets :
 | `npm run build` | Compile l'application pour la production |
 | `npm run start` | Démarre l'application en mode production |
 | `npm run lint` | Vérifie la qualité du code avec ESLint |
+
+---
+
+## Idées d'amélioration
+
+- **Taux de change dynamiques** : remplacer les taux fixes du convertisseur par un appel à une API de taux de change en temps réel (ex. exchangerate-api.com), avec repli sur les valeurs actuelles en cas d'échec.
+- **Tests unitaires** : ajouter des tests (Jest / Vitest) sur les fonctions de conversion pures et sur la logique de calcul de la calculatrice.
+- **Plus de devises et d'unités** : étendre le convertisseur à d'autres devises et à d'autres types de conversion (longueur, poids, etc.).
+- **Persistance de l'historique** : sauvegarder l'historique des calculs dans le `localStorage` pour qu'il survive au rechargement de la page.
+- **Thème clair / sombre** : ajouter un bouton de bascule entre un thème clair et le thème sombre actuel.
