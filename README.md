@@ -14,6 +14,7 @@ Une application de calculatrice moderne, responsive et interactive développée 
 - [Installation et lancement](#installation-et-lancement)
 - [Architecture des composants](#architecture-des-composants)
 - [Scripts disponibles](#scripts-disponibles)
+- [Déclaration d'utilisation de l'intelligence artificielle (IA)](#déclaration-dutilisation-de-lintelligence-artificielle-ia)
 - [Idées d'amélioration](#idées-damélioration)
 
 ---
@@ -125,6 +126,19 @@ Composant à deux modes, sélectionnables via des onglets :
 | `npm run build` | Compile l'application pour la production |
 | `npm run start` | Démarre l'application en mode production |
 | `npm run lint` | Vérifie la qualité du code avec ESLint |
+
+---
+
+## Déclaration d'utilisation de l'intelligence artificielle (IA)
+
+Dans le cadre du développement de ce projet, des outils d'intelligence artificielle (tels que des assistants de code basés sur des LLM) ont été utilisés de manière ponctuelle pour :
+
+* **L'assistance au code et le prototypage :** Génération de structures de composants de base et suggestions de syntaxe.
+* **Le débogage et l'optimisation :** Analyse d'erreurs (comme les problèmes de précision des nombres à virgule flottante).
+* **La documentation :** Aide à la rédaction et à la structuration du fichier README.
+
+**Transparence et responsabilité :**
+Tout le code généré ou suggéré par l'IA a été systématiquement relu, testé, compris et adapté par mes soins pour répondre aux exigences spécifiques du projet. L'architecture globale, la logique fonctionnelle et la validation finale restent entièrement sous ma responsabilité.
 
 ---
 
